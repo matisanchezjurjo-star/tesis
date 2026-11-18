@@ -372,7 +372,7 @@ p { color: var(--ink-2); }
   .slide {
     position: relative; inset: auto; opacity: 1; visibility: visible;
     padding: 44px 20px 56px; border-bottom: 1px solid var(--line);
-    overflow: visible; min-height: 0;
+    overflow: hidden; min-height: 0;
   }
   .slide .rv { opacity: 1; transform: none; }
   .foot { left: 20px; right: 20px; bottom: 18px; font-size: 11px; }
