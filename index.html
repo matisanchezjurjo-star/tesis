@@ -52,8 +52,9 @@
 <div class="stage" id="stage">
 
 <!-- 1 · PORTADA -->
-<section class="slide cover" data-title="Portada">
+<section class="slide cover" data-title="Portada" data-fx="cover">
   <div class="bg"><img src="assets/img/quebrada.jpg" alt="Paisaje de la Quebrada, norte argentino"></div>
+  <div class="wm-radar" aria-hidden="true"><div class="sweep"></div><i class="blip"></i></div>
   <div class="inner">
     <div class="kicker rv">Trabajo de Investigación Final · Relaciones Internacionales · UADE · 2026</div>
     <h1 class="rv">Detección del narcotráfico en la frontera norte argentina</h1>
@@ -64,7 +65,7 @@
 </section>
 
 <!-- 2 · CADENA REGIONAL -->
-<section class="slide" data-title="La cocaína como cadena regional" data-source="Fuentes: UNODC (2025); Local 10 (2026)">
+<section class="slide" data-title="La cocaína como cadena regional" data-fx="chain" data-source="Fuentes: UNODC (2025); Local 10 (2026)">
   <header class="head">
     <h2>La cocaína funciona como una cadena regional</h2>
     <p class="sub">Argentina es, sobre todo, un corredor de paso entre el origen y los mercados</p>
@@ -104,26 +105,26 @@
 </section>
 
 <!-- 3 · TRES VÍAS -->
-<section class="slide" data-title="La droga entra por tres vías">
+<section class="slide" data-title="La droga entra por tres vías" data-fx="routes">
   <header class="head">
     <h2>La droga entra por tres vías</h2>
     <p class="sub">Este trabajo se concentra en las vías terrestre y aérea</p>
   </header>
   <div class="body grid g3">
     <article class="route rv">
-      <figure class="photo"><img src="assets/img/ruta.jpg" alt="Ruta Nacional 34 en Salta"></figure>
+      <figure class="photo"><img src="assets/img/ruta.jpg" alt="Ruta Nacional 34 en Salta"><span class="mover m-truck" aria-hidden="true"><svg><use href="#i-truck"/></svg></span></figure>
       <div class="t"><span class="ico"><svg><use href="#i-truck"/></svg></span><h3>Terrestre</h3></div>
       <p>Rutas como la Nacional 34, en Salta, donde se concentró un tercio de los kilos incautados.</p>
       <span class="tag">Se analiza</span>
     </article>
     <article class="route rv">
-      <figure class="photo"><img src="assets/img/avioneta.jpg" alt="Avioneta despegando"></figure>
+      <figure class="photo"><img src="assets/img/avioneta.jpg" alt="Avioneta despegando"><span class="mover m-plane" aria-hidden="true"><svg><use href="#i-plane"/></svg></span></figure>
       <div class="t"><span class="ico"><svg><use href="#i-plane"/></svg></span><h3>Aérea</h3></div>
       <p>Avionetas que despegan de pistas clandestinas en Bolivia y Paraguay y aterrizan en caminos rurales.</p>
       <span class="tag">Se analiza</span>
     </article>
     <article class="route out rv">
-      <figure class="photo"><img src="assets/img/hidrovia.jpg" alt="Barcaza en la Hidrovía Paraná-Paraguay"></figure>
+      <figure class="photo"><img src="assets/img/hidrovia.jpg" alt="Barcaza en la Hidrovía Paraná-Paraguay"><span class="mover m-ship" aria-hidden="true"><svg><use href="#i-ship"/></svg></span></figure>
       <div class="t"><span class="ico"><svg><use href="#i-ship"/></svg></span><h3>Fluvial</h3></div>
       <p>La Hidrovía Paraná-Paraguay, una vía ya consolidada hacia el exterior.</p>
       <span class="tag grey">Fuera del estudio</span>
@@ -133,7 +134,7 @@
 </section>
 
 <!-- 4 · DETECTA, NO COMPRUEBA -->
-<section class="slide" data-title="El Estado detecta, pero no logra comprobar" data-source="Fuente: Contexto Tucumán (2026)">
+<section class="slide" data-title="El Estado detecta, pero no logra comprobar" data-fx="gap" data-source="Fuente: Contexto Tucumán (2026)">
   <header class="head">
     <h2>El Estado detecta, pero no logra comprobar</h2>
     <p class="sub">Vuelos irregulares en el norte argentino, primer semestre de 2026</p>
@@ -171,13 +172,13 @@
 </section>
 
 <!-- 5 · PREGUNTA -->
-<section class="slide" data-title="Qué buscamos responder">
+<section class="slide" data-title="Qué buscamos responder" data-fx="question">
   <header class="head">
     <div class="kicker">Pregunta de investigación</div>
     <h2>Qué buscamos responder</h2>
   </header>
   <div class="body center">
-    <p class="question rv">¿Qué tecnología puede incorporar el Estado argentino para detectar mejor el narcotráfico en la frontera norte, con qué criterios y en qué orden, dentro de los límites legales y de presupuesto?</p>
+    <p class="question rv">¿<span class="hl">Qué tecnología</span> puede incorporar el Estado argentino para detectar mejor el narcotráfico en la frontera norte, <span class="hl">con qué criterios</span> y <span class="hl">en qué orden</span>, dentro de los límites legales y de presupuesto?</p>
     <p class="objective rv"><b>Objetivo general:</b> evaluar cuatro líneas de modernización y proponer al Ministerio de Defensa un orden de prioridad fundamentado.</p>
     <div class="grid g5 rv">
       <div class="obj"><div class="num">1</div><p>Describir lo que el Estado tiene hoy y sus brechas</p></div>
@@ -191,7 +192,7 @@
 </section>
 
 <!-- 6 · RECORTE -->
-<section class="slide" data-title="Dónde y cuándo miramos">
+<section class="slide" data-title="Dónde y cuándo miramos" data-fx="scope">
   <header class="head">
     <h2>Dónde y cuándo miramos</h2>
     <p class="sub">Un recorte acotado para poder comparar opciones concretas</p>
@@ -217,13 +218,14 @@
         <svg viewBox="0 0 640 170" role="img" aria-label="Esquema del corredor de estudio: Bolivia al norte; Jujuy y Salta en la frontera; ruta aérea hacia Chaco, Santiago del Estero y Santa Fe">
           <rect x="0" y="0" width="640" height="46" rx="8" fill="#e3e7ee"/>
           <text x="16" y="29" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#6b7489" letter-spacing="1.5">BOLIVIA</text>
-          <line x1="0" y1="52" x2="640" y2="52" stroke="#14213d" stroke-width="2" stroke-dasharray="6 5"/>
+          <line class="m-border" x1="0" y1="52" x2="640" y2="52" stroke="#14213d" stroke-width="2" stroke-dasharray="6 5"/>
           <text x="632" y="70" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#6b7489">742 km de frontera</text>
-          <rect x="40" y="80" width="120" height="44" rx="8" fill="#d9961a"/>
-          <text x="100" y="107" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#fff">Jujuy</text>
-          <rect x="176" y="80" width="120" height="44" rx="8" fill="#d9961a"/>
-          <text x="236" y="107" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#fff">Salta</text>
+          <g class="m-prov"><rect x="40" y="80" width="120" height="44" rx="8" fill="#d9961a"/>
+          <text x="100" y="107" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#fff">Jujuy</text></g>
+          <g class="m-prov"><rect x="176" y="80" width="120" height="44" rx="8" fill="#d9961a"/>
+          <text x="236" y="107" text-anchor="middle" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#fff">Salta</text></g>
           <path d="M296 102 C 360 100, 380 120, 420 128" fill="none" stroke="#2f5d9e" stroke-width="2" stroke-dasharray="4 4"/>
+          <g class="m-plane"><circle r="9" fill="#2f5d9e"/><circle r="3.5" fill="#fff"/><animateMotion dur="2.6s" begin="indefinite" repeatCount="indefinite" path="M296 102 C 360 100, 380 120, 420 128"/></g>
           <g font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#2f5d9e">
             <rect x="424" y="84" width="200" height="74" rx="8" fill="#eaf0f8"/>
             <text x="440" y="106">Ruta aérea →</text>
@@ -239,7 +241,7 @@
 </section>
 
 <!-- 7 · METODOLOGÍA (desde el policy brief) -->
-<section class="slide" data-title="Cómo lo analizamos">
+<section class="slide" data-title="Cómo lo analizamos" data-fx="method">
   <header class="head">
     <h2>Cómo lo analizamos</h2>
     <p class="sub">Nivel estatal: cómo decide el Ministerio de Defensa</p>
@@ -258,7 +260,7 @@
       </div>
       <div class="card">
         <span class="ico green"><svg><use href="#i-book"/></svg></span>
-        <h3 style="margin:18px 0 8px">158 fuentes</h3>
+        <h3 style="margin:18px 0 8px"><span class="count">158</span> fuentes</h3>
         <p>Investigación documental. Cada dato se clasifica según su grado de certeza.</p>
       </div>
     </div>
@@ -275,32 +277,32 @@
 </section>
 
 <!-- 8 · SENSORES -->
-<section class="slide" data-title="Argentina ya tiene sensores">
+<section class="slide" data-title="Argentina ya tiene sensores" data-fx="sensors">
   <header class="head">
     <h2>Argentina ya tiene sensores: falta que clasifiquen y se conecten</h2>
     <p class="sub">Lo que existe hoy y qué le falta</p>
   </header>
   <div class="body grid g4">
     <article class="sensor rv">
-      <figure class="photo"><img src="assets/img/radar.jpg" alt="Radar RPA-200M de INVAP"></figure>
+      <figure class="photo"><img src="assets/img/radar.jpg" alt="Radar RPA-200M de INVAP"><span class="mini mini-radar" aria-hidden="true"><i></i></span></figure>
       <h3>Radares</h3><div class="label">SINVICA · Fuerza Aérea</div>
       <p>Los nuevos RPA-200M de INVAP siguen más de 1.000 blancos a la vez.</p>
       <div class="gapbox"><b>Brecha:</b> no distinguen bien qué vuelo es sospechoso.</div>
     </article>
     <article class="sensor rv">
-      <figure class="photo"><img src="assets/img/saocom.jpg" alt="Satélite SAOCOM"></figure>
+      <figure class="photo"><img src="assets/img/saocom.jpg" alt="Satélite SAOCOM"><span class="mini mini-orbit" aria-hidden="true"><i></i></span></figure>
       <h3>Satélites</h3><div class="label">SAOCOM · CONAE</div>
       <p>Satélites argentinos de radar, pensados para el suelo y las emergencias.</p>
       <div class="gapbox"><b>Brecha:</b> no se usan para buscar pistas clandestinas.</div>
     </article>
     <article class="sensor rv">
-      <figure class="photo"><img src="assets/img/gendarmeria.jpg" alt="Camioneta de Gendarmería Nacional"></figure>
+      <figure class="photo"><img src="assets/img/gendarmeria.jpg" alt="Camioneta de Gendarmería Nacional"><span class="mini mini-ping" aria-hidden="true"><i></i></span></figure>
       <h3>Sensores en tierra</h3><div class="label">SVIF · Gendarmería</div>
       <p>11 torres con radares, cámaras y lectoras de patentes.</p>
       <div class="gapbox"><b>Brecha:</b> sus datos no se cruzan con los radares aéreos.</div>
     </article>
     <article class="sensor rv">
-      <figure class="photo"><img src="assets/img/vbat.jpg" alt="Dron V-BAT en vuelo"></figure>
+      <figure class="photo"><img src="assets/img/vbat.jpg" alt="Dron V-BAT en vuelo"><span class="mini mini-drone" aria-hidden="true"><svg><use href="#i-plane"/></svg></span></figure>
       <h3>Drones</h3><div class="label">Ejército, Armada y Seguridad</div>
       <p>Compras en curso, como los V-BAT donados por EE.UU.</p>
       <div class="gapbox"><b>Brecha:</b> ninguna compra exige detección automática.</div>
@@ -310,7 +312,7 @@
 </section>
 
 <!-- 9 · LEY -->
-<section class="slide" data-title="La ley permite interceptar, pero no derribar" data-source="Decreto 171/2023 · Ley 23.554 · Ley 24.059 · Decreto 1112/2024 · Res. 347/2025">
+<section class="slide" data-title="La ley permite interceptar, pero no derribar" data-fx="law" data-source="Decreto 171/2023 · Ley 23.554 · Ley 24.059 · Decreto 1112/2024 · Res. 347/2025">
   <header class="head">
     <h2>La ley permite interceptar, pero no derribar</h2>
     <p class="sub">Qué puede hacer hoy Defensa ante un avión sospechoso (Decreto 171/2023)</p>
@@ -333,14 +335,21 @@
         <span class="ico gold"><svg><use href="#i-scale"/></svg></span>
         <div><h3>Seguridad · Gendarmería</h3><p>Pasos fronterizos y ciudades. Actúa cuando el avión ya aterrizó.</p></div>
       </div>
-      <div class="handoff">En el traspaso de aire a tierra, entre Defensa y Seguridad, se pierde información.</div>
+      <div class="handoff">
+        <div class="ho" aria-hidden="true">
+          <span class="ho-end"><svg><use href="#i-plane"/></svg>Aire</span>
+          <span class="ho-line"><i class="ho-dot"></i><b class="ho-cut"><svg><use href="#i-x"/></svg></b></span>
+          <span class="ho-end"><svg><use href="#i-truck"/></svg>Tierra</span>
+        </div>
+        En el traspaso de aire a tierra, entre Defensa y Seguridad, se pierde información.
+      </div>
     </div>
   </div>
   <aside class="notes">Las leyes 23.554 y 24.059 separan Defensa y Seguridad. El Decreto 1112/2024 permite a Defensa colaborar en la vigilancia de fronteras, pero la Operación Roca (Res. 347/2025) excluye pasos habilitados y zonas urbanas. Se puede identificar, interceptar y obligar a aterrizar, pero no derribar (Decreto 171/2023). Rigen además la ley 25.326 de datos personales y la regulación de drones de ANAC. Argentina no tiene una ley específica de IA.</aside>
 </section>
 
 <!-- 10 · REGIÓN -->
-<section class="slide" data-title="Qué hicieron otros países de la región">
+<section class="slide" data-title="Qué hicieron otros países de la región" data-fx="region">
   <header class="head">
     <h2>Qué hicieron otros países de la región</h2>
     <p class="sub">La inteligencia artificial ya se usa para detectar pistas y vuelos, sobre todo en pruebas</p>
@@ -364,7 +373,7 @@
 </section>
 
 <!-- 11 · TENSIONES -->
-<section class="slide" data-title="Tres tensiones que condicionan la decisión">
+<section class="slide" data-title="Tres tensiones que condicionan la decisión" data-fx="tens">
   <header class="head">
     <h2>Tres tensiones que condicionan la decisión</h2>
     <p class="sub">Quién decide y dónde chocan los intereses</p>
@@ -393,7 +402,7 @@
 </section>
 
 <!-- 12 · CUATRO LÍNEAS -->
-<section class="slide" data-title="Las cuatro líneas de modernización">
+<section class="slide" data-title="Las cuatro líneas de modernización" data-fx="lines">
   <header class="head">
     <h2>Las cuatro líneas de modernización</h2>
     <p class="sub">Cuatro opciones independientes entre sí</p>
@@ -544,7 +553,7 @@
 </section>
 
 <!-- 17 · RIESGOS -->
-<section class="slide" data-title="Los principales riesgos">
+<section class="slide" data-title="Los principales riesgos" data-fx="risks">
   <header class="head">
     <h2>Los principales riesgos</h2>
     <p class="sub">El mayor riesgo es legal e institucional: ninguna tecnología lo resuelve sola</p>
@@ -576,7 +585,7 @@
 </section>
 
 <!-- 18 · ORDEN -->
-<section class="slide" data-title="Recomendamos este orden">
+<section class="slide" data-title="Recomendamos este orden" data-fx="order">
   <header class="head">
     <h2>Recomendamos este orden</h2>
     <p class="sub">Elegimos opciones que funcionan aunque no cambien las leyes ni llegue más presupuesto</p>
@@ -611,7 +620,7 @@
 </section>
 
 <!-- 19 · HOJA DE RUTA -->
-<section class="slide" data-title="Hoja de ruta">
+<section class="slide" data-title="Hoja de ruta" data-fx="road">
   <header class="head">
     <h2>Hoja de ruta</h2>
     <p class="sub">Cada fase tiene un indicador para saber si funciona</p>
@@ -645,8 +654,9 @@
 </section>
 
 <!-- 20 · CONCLUSIÓN -->
-<section class="slide closing dark" data-title="Conclusión">
+<section class="slide closing dark" data-title="Conclusión" data-fx="closing">
   <div class="bg"><img src="assets/img/radar.jpg" alt=""></div>
+  <div class="wm-radar" aria-hidden="true"><div class="sweep"></div><i class="blip"></i></div>
   <div class="kicker rv">Conclusión</div>
   <h2 class="rv">El problema no es ver más, es saber qué estamos viendo</h2>
   <p class="intro rv">Argentina ya tiene radares, satélites, sensores y drones. Lo que falta es que esa información se clasifique y llegue a quien puede actuar.</p>
@@ -692,6 +702,7 @@
   <div class="ir-readout"><strong>Blanco 05 / 190</strong>Vuelo irregular · Sin plan</div>
 </div>
 
+<script src="fx.js"></script>
 <script src="app.js"></script>
 <script src="intro.js"></script>
 </body>

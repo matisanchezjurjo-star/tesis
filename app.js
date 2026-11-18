@@ -21,7 +21,7 @@
   const dots = $('dots');
   if (dots) {
     const hits = new Set([23, 61, 98, 140, 177]);
-    dots.innerHTML = Array.from({ length: 190 }, (_, i) => `<i${hits.has(i) ? ' class="hit"' : ''}></i>`).join('');
+    dots.innerHTML = Array.from({ length: 190 }, (_, i) => `<i style="--i:${i}"${hits.has(i) ? ' class="hit"' : ''}></i>`).join('');
   }
 
   // overview
@@ -51,6 +51,7 @@
     notesPanel.innerHTML = `<b>Notas · ${cur + 1}</b>${note ? note.innerHTML : 'Sin notas.'}`;
     [...ovGrid.children].forEach((c, i) => c.classList.toggle('cur', i === cur));
     if (push) history.replaceState(null, '', `#${cur + 1}`);
+    dispatchEvent(new CustomEvent('slidechange', { detail: slides[cur] }));
   }
 
   function toggleOverview(force) {
