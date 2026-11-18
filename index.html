@@ -7,7 +7,7 @@
 <meta name="description" content="Detección del narcotráfico en la frontera norte argentina: prioridades para incorporar inteligencia artificial en Defensa (2020-2026). Trabajo de Investigación Final · Relaciones Internacionales · UADE.">
 <meta property="og:title" content="Detección del narcotráfico en la frontera norte argentina">
 <meta property="og:description" content="Prioridades para incorporar inteligencia artificial en Defensa (2020-2026) · TIF UADE 2026">
-<meta property="og:image" content="assets/img/portada.jpg">
+<meta property="og:image" content="assets/img/quebrada.jpg">
 <meta name="theme-color" content="#14213d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213d'/%3E%3Ccircle cx='32' cy='32' r='16' fill='none' stroke='%23d9961a' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='5' fill='%23d9961a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,17 +53,12 @@
 
 <!-- 1 · PORTADA -->
 <section class="slide cover" data-title="Portada">
-  <div class="bg"><img src="assets/img/portada.jpg" alt=""></div>
+  <div class="bg"><img src="assets/img/quebrada.jpg" alt="Paisaje de la Quebrada, norte argentino"></div>
   <div class="inner">
-    <div class="kicker rv">Trabajo de Investigación Final · Relaciones Internacionales · UADE</div>
+    <div class="kicker rv">Trabajo de Investigación Final · Relaciones Internacionales · UADE · 2026</div>
     <h1 class="rv">Detección del narcotráfico en la frontera norte argentina</h1>
     <p class="lead rv">Prioridades para incorporar inteligencia artificial en Defensa (2020-2026)</p>
     <p class="brief rv">Policy brief dirigido al Ministerio de Defensa de la Nación</p>
-    <div class="who rv">
-      <b>Tomás Pastorino Menoyo · Matías Ezequiel Sánchez</b><br>
-      Docentes: Alejandro Laurnagaray · Agustín De Marco<br>
-      Buenos Aires, 2026
-    </div>
   </div>
   <aside class="notes">Presentamos un policy brief dirigido al Ministerio de Defensa. La pregunta de fondo: cómo incorporar inteligencia artificial para detectar mejor el narcotráfico en la frontera norte, de manera gradual, medible y dentro del marco legal vigente.</aside>
 </section>
@@ -615,7 +610,7 @@
 
 <!-- 20 · CONCLUSIÓN -->
 <section class="slide closing dark" data-title="Conclusión">
-  <div class="bg"><img src="assets/img/quebrada.jpg" alt=""></div>
+  <div class="bg"><img src="assets/img/radar.jpg" alt=""></div>
   <div class="kicker rv">Conclusión</div>
   <h2 class="rv">El problema no es ver más, es saber qué estamos viendo</h2>
   <p class="intro rv">Argentina ya tiene radares, satélites, sensores y drones. Lo que falta es que esa información se clasifique y llegue a quien puede actuar.</p>
@@ -648,6 +643,20 @@
   <div class="ov-grid" id="ovGrid"></div>
 </div>
 
+<div class="intro-screen" id="intro" aria-hidden="true">
+  <canvas></canvas>
+  <div class="ir-hud ir-tl ir-rec"><b>SINVICA</b> · Vigilancia aérea</div>
+  <div class="ir-hud ir-tr">Frontera norte<br>Corredor Bolivia – Salta / Jujuy</div>
+  <div class="ir-hud ir-bl">
+    <div class="ir-status">Escaneando…</div>
+    <div class="ir-coords"></div>
+  </div>
+  <div class="ir-hud ir-br">Trazas analizadas <b class="ir-count">000</b><div class="ir-skip">Clic o tecla para saltar</div></div>
+  <div class="ir-lock"></div>
+  <div class="ir-readout"><strong>Blanco 05 / 190</strong>Vuelo irregular · Sin plan</div>
+</div>
+
 <script src="app.js"></script>
+<script src="intro.js"></script>
 </body>
 </html>

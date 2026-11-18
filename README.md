@@ -12,6 +12,8 @@ Presentación web estática para la defensa. No necesita instalar nada ni compil
 | O / Esc | Índice de diapositivas |
 | Inicio / Fin | Primera / última |
 
+Al abrir en la diapositiva 1 se reproduce una intro de radar (~6 s); clic o cualquier tecla la saltea.
+
 Cada diapositiva tiene su URL (`/#7`). En el celular se lee como una página con scroll.
 Para exportar a PDF: Imprimir → Guardar como PDF (una diapositiva por página).
 

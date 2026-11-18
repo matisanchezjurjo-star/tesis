@@ -575,3 +575,75 @@ p { color: var(--ink-2); }
   .scope-visual { grid-template-rows: auto auto; }
 }
 .phase { min-height: 430px; }
+
+/* ============ Intro · radar ============ */
+.intro-screen {
+  position: fixed; inset: 0; z-index: 50; cursor: pointer;
+  background: radial-gradient(ellipse at center, #13233f 0%, #0a1222 70%);
+  color: #fff; overflow: hidden;
+  transform-origin: var(--tx, 50%) var(--ty, 50%);
+}
+.intro-screen canvas { position: absolute; inset: 0; }
+.intro-screen::after { /* scanlines */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px);
+}
+.ir-hud { position: absolute; font: 600 12px/1.6 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.ir-tl { left: 32px; top: 28px; }
+.ir-tr { right: 32px; top: 28px; text-align: right; }
+.ir-bl { left: 32px; bottom: 28px; }
+.ir-br { right: 32px; bottom: 28px; text-align: right; }
+.ir-hud b { color: rgba(255,255,255,.9); font-weight: 700; }
+.ir-rec::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #e04a3f; margin-right: 8px; animation: blink 1s steps(2) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.ir-status { font-size: 15px; color: rgb(120,214,170); min-height: 1.6em; letter-spacing: .12em; }
+.intro-screen.p2 .ir-status { color: var(--accent); }
+.ir-coords { color: rgba(255,255,255,.75); min-height: 1.6em; }
+.ir-skip { color: rgba(255,255,255,.4); font-size: 11px; margin-top: 6px; }
+
+.ir-lock {
+  position: absolute; width: 150px; height: 150px; transform: translate(-50%, -50%) scale(2.4) rotate(45deg);
+  opacity: 0; transition: transform .7s cubic-bezier(.2,.8,.2,1), opacity .3s;
+  pointer-events: none;
+}
+.ir-lock::before, .ir-lock::after { content: ""; position: absolute; inset: 0; border: 2px solid var(--accent);
+  clip-path: polygon(0 0, 28% 0, 28% 3px, 3px 3px, 3px 28%, 0 28%, 0 72%, 3px 72%, 3px calc(100% - 3px), 28% calc(100% - 3px), 28% 100%, 72% 100%, 72% calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 72%, 100% 72%, 100% 28%, calc(100% - 3px) 28%, calc(100% - 3px) 3px, 72% 3px, 72% 0, 100% 0, 100% 100%, 0 100%); }
+.ir-lock::after { border: none; inset: 50% auto auto 50%; width: 0; height: 0; }
+.intro-screen.p2 .ir-lock { opacity: 1; transform: translate(-50%, -50%) scale(.5) rotate(0deg); }
+
+.ir-readout {
+  position: absolute; padding: 12px 16px; border-left: 2px solid var(--accent);
+  background: rgba(10,18,34,.75); backdrop-filter: blur(4px);
+  font: 600 12px/1.6 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.8);
+  opacity: 0; transform: translateX(-8px); transition: opacity .4s .35s, transform .4s .35s; white-space: nowrap;
+}
+.ir-readout strong { display: block; color: var(--accent); font-size: 14px; }
+.intro-screen.p2 .ir-readout { opacity: 1; transform: none; }
+
+.ir-title { position: absolute; left: 50%; bottom: 13%; transform: translateX(-50%); text-align: center; opacity: 0; transition: opacity .6s; }
+.intro-screen.p1 .ir-title { opacity: 1; }
+
+.intro-screen.out { animation: introOut 1s cubic-bezier(.6,0,.2,1) forwards; }
+@keyframes introOut {
+  0% { transform: scale(1); opacity: 1; filter: brightness(1); }
+  35% { filter: brightness(1.8); }
+  100% { transform: scale(7); opacity: 0; filter: brightness(1); }
+}
+body.intro-on .controls, body.intro-on .progress { visibility: hidden; }
+
+@media (max-width: 820px), (max-aspect-ratio: 4/5) {
+  .ir-tr, .ir-br { display: none; }
+  .ir-hud { font-size: 10px; }
+  .ir-tl, .ir-bl { left: 18px; } .ir-br { right: 18px; }
+  .ir-status { font-size: 12px; }
+  .ir-readout { font-size: 10px; padding: 8px 10px; }
+  .ir-readout strong { font-size: 11px; }
+  .ir-lock { width: 100px; height: 100px; }
+}
+@media print { .intro-screen { display: none !important; } }
+/* cleaner cover */
+.cover .inner { max-width: 1120px; padding: 120px 140px; }
+.cover h1 { font-size: 84px; }
+.cover .lead { margin-top: 36px; font-size: 28px; }
+.cover .brief { margin-top: 28px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.18); max-width: 620px; }
+@media (max-width: 820px), (max-aspect-ratio: 4/5) { .cover .inner { padding: 64px 22px; } .cover h1 { font-size: 40px; } }

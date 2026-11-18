@@ -70,7 +70,7 @@
   $('fsBtn').onclick = toggleFs;
 
   addEventListener('keydown', e => {
-    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.metaKey || e.ctrlKey || e.altKey || document.body.classList.contains('intro-on')) return;
     if (reading()) return;
     const k = e.key;
     if (overview.classList.contains('open')) {
