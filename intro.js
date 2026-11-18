@@ -1,10 +1,9 @@
 /* Intro: radar sweep that detects a contact, locks on, and opens the deck. */
 (() => {
-  const start = parseInt(location.hash.slice(1)) || 1;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const intro = document.getElementById('intro');
   if (!intro) return;
-  if (start !== 1 || reduce) { intro.remove(); return; }
+  if (reduce) { intro.remove(); return; }
 
   const cover = document.querySelector('.slide');
   document.body.classList.add('intro-on');

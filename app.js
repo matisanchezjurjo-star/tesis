@@ -50,7 +50,6 @@
     const note = slides[cur].querySelector('.notes');
     notesPanel.innerHTML = `<b>Notas · ${cur + 1}</b>${note ? note.innerHTML : 'Sin notas.'}`;
     [...ovGrid.children].forEach((c, i) => c.classList.toggle('cur', i === cur));
-    if (push) history.replaceState(null, '', `#${cur + 1}`);
     dispatchEvent(new CustomEvent('slidechange', { detail: slides[cur] }));
   }
 
@@ -69,6 +68,7 @@
   $('ovBtn').onclick = () => toggleOverview();
   $('notesBtn').onclick = () => notesPanel.classList.toggle('open');
   $('fsBtn').onclick = toggleFs;
+  $('restartBtn').onclick = () => location.reload();
 
   addEventListener('keydown', e => {
     if (e.metaKey || e.ctrlKey || e.altKey || document.body.classList.contains('intro-on')) return;
@@ -81,6 +81,7 @@
     if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(k)) { e.preventDefault(); go(cur + 1); }
     else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); go(cur - 1); }
     else if (k === 'Home') go(0);
+    else if (k === 'r' || k === 'R') location.reload();
     else if (k === 'End') go(total - 1);
     else if (k === 'f' || k === 'F') toggleFs();
     else if (k === 'o' || k === 'O' || k === 'Escape') toggleOverview();
@@ -107,9 +108,9 @@
   });
 
   addEventListener('resize', fit);
-  addEventListener('hashchange', () => go((parseInt(location.hash.slice(1)) || 1) - 1, false));
   fit();
-  go((parseInt(location.hash.slice(1)) || 1) - 1, false);
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  go(0, false);
   // in reading mode every slide is visible
   if (reading()) slides.forEach(s => s.classList.add('active'));
   matchMedia('(max-width: 820px), (max-aspect-ratio: 4/5)').addEventListener('change', () => { fit(); if (reading()) slides.forEach(s => s.classList.add('active')); else { slides.forEach(s => s.classList.remove('active')); go(cur, false); } });

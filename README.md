@@ -11,10 +11,11 @@ Presentación web estática para la defensa. No necesita instalar nada ni compil
 | N | Notas del orador |
 | O / Esc | Índice de diapositivas |
 | Inicio / Fin | Primera / última |
+| R | Reiniciar desde cero (con la intro del radar) |
 
-Al abrir en la diapositiva 1 se reproduce una intro de radar (~6 s); clic o cualquier tecla la saltea.
+Al abrir se reproduce una intro de radar (~6 s); clic o cualquier tecla la saltea.
 
-Cada diapositiva tiene su URL (`/#7`). En el celular se lee como una página con scroll.
+Al recargar, la presentación siempre arranca desde la portada con la intro. En el celular se lee como una página con scroll.
 Para exportar a PDF: Imprimir → Guardar como PDF (una diapositiva por página).
 
 ## Publicar en Vercel
